@@ -1,44 +1,15 @@
-function ChangeGrid1(){
-let player1='X';
-document.getElementById("cell1").innerHTML = player1;
-}
-
-function ChangeGrid2(){
-    let player1='X';
-    document.getElementById("cell2").innerHTML = player1;
-}
-
-function ChangeGrid3(){
-    let player1='X';
-    document.getElementById("cell3").innerHTML = player1;
-}
-
-function ChangeGrid4(){
-    let player1='X';
-    document.getElementById("cell4").innerHTML = player1;
-}
-
-function ChangeGrid5(){
-    let player1='X';
-    document.getElementById("cell5").innerHTML = player1;
-}
-
-function ChangeGrid6(){
-    let player1='X';
-    document.getElementById("cell6").innerHTML = player1;
-}
-
-function ChangeGrid7(){
-    let player1='X';
-    document.getElementById("cell7").innerHTML = player1;
-}
-
-function ChangeGrid8(){
-    let player1='X';
-    document.getElementById("cell8").innerHTML = player1;
-}
-
-function ChangeGrid9(){
-    let player1='X';
-    document.getElementById("cell9").innerHTML = player1;
-}
+let OrigBoard;
+const HumanPlayer;
+const AiPlayer
+const winCombo=[
+    [0,1,2]
+    [3,4,5]
+    [6,7,8]
+    [0,4,8]
+    [2,4,6]
+    [0,3,6]
+    [1,4,7]
+    [2,5,8]
+    
+]
+const cells=document.querySelectorAll('.cell');

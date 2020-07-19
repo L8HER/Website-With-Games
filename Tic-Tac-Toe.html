@@ -7,42 +7,38 @@
     <link rel="stylesheet" href="CSS/style.css">
     
 <body>
-    <div>
         <div class="Times Container"><h1>Tic-Tac-Toe</h1></div>
         <script src="index.js"></script>
         <script src=Tic-Tac-Toe.js></script>
+       <nav>
         <ul>
             <div class="Times Container"><li><a href="index.html">Home</a></li></div>
             <div class="Times Container"><li><a href="Tic-Tac-Toe.html">Tic-Tac-Toe</a></li></div>
             <div class="Times Container"><li><a href="About.html">About</a></li></div>
             <div class="Times Container"><li><a href="Contact Us.html">Contact Us</a></li></div>
-        </div>
-        <div>   
-            <script>PrintSomething('TestString')</script>
-        </div>
-        <div class="grid">
-            <div class="cell" id="cell1"></div>
-            <div class="cell" id="cell2"></div>
-            <div class="cell" id="cell3"></div>
-            <div class="cell" id="cell4"></div>
-            <div class="cell" id="cell5"></div>
-            <div class="cell" id="cell6"></div>
-            <div class="cell" id="cell7"></div>
-            <div class="cell" id="cell8"></div>
-            <div class="cell" id="cell9"></div>
-        </div>
-        <div class="Times">
-            <button type="button" class="Button" id="Button1" onclick="ChangeGrid1()"></button>
-            <button type="button" class="Button" id="Button2" onclick="ChangeGrid2()"></button>
-            <button type="button" class="Button" id="Button3" onclick="ChangeGrid3()"> </button>
-            <button type="button" class="Button" id="Button4" onclick="ChangeGrid4()"> </button>
-            <button type="button" class="Button" id="Button5" onclick="ChangeGrid5()"> </button>
-            <button type="button" class="Button" id="Button6" onclick="ChangeGrid6()"> </button>
-            <button type="button" class="Button" id="Button7" onclick="ChangeGrid7()"> </button>
-            <button type="button" class="Button" id="Button8" onclick="ChangeGrid8()"> </button>
-            <button type="button" class="Button" id="Button9" onclick="ChangeGrid9()"> </button>
+        </nav> 
 
-            
-        </div>
+        <table>
+        <tr>
+            <td class="cell" id="0"></td>
+            <td class="cell" id="1"></td>
+            <td class="cell" id="2"></td>
+        </tr>
+        <tr>
+            <td class="cell" id="3"></td>
+            <td class="cell" id="4"></td>
+            <td class="cell" id="5"></td>
+        </tr>
+        <tr>
+            <td class="cell" id="6"></td>
+            <td class="cell" id="7"></td>
+            <td class="cell" id="8"></td>
+        </tr>
+        </table>
+
+        <div class="Times">
+            <button type="button" class="Restart" id="Restart" onclick="RestartGame()">Restart</button>
+
+
 </body>
 </html>
