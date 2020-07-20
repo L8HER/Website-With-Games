@@ -53,7 +53,7 @@ li a:hover{
     flex: 0 0 32%;
     height: 90px;
     margin-bottom: 5px;
-    background-color: grey;
+    background-color: white;
 }
 
 .Restart{
@@ -75,6 +75,8 @@ td{
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
+    font-size: 70px;
+
 }
  table{
      position: absolute;
@@ -82,8 +84,13 @@ td{
      left:50%;
      margin-left: -155px;
      margin-top: 20%;
+ 
 
 
+ }
+ 
+ table tr td:hover{
+     background-color: grey;
  }
 
  table tr:first-child td{
@@ -100,5 +107,21 @@ table tr td:first-child{
 
 table tr td:last-child{
     border-right:0;
+}
+
+.endgame{
+    display: none;
+    width: 35%;
+    top: 45%;
+    background-color: rgba(255, 0, 0, 0.8);
+    position: absolute;
+    left:40%;
+    padding-left: -100px;
+    padding-bottom: 50px;
+    color:black;
+    border-radius: 5px;;
+    
+
+
 }
 

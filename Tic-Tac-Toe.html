@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Game</title>
     <link rel="stylesheet" href="CSS/style.css">
+    </head>
     
 <body>
-        <div class="Times Container"><h1>Tic-Tac-Toe</h1></div>
-        <script src="index.js"></script>
-        <script src=Tic-Tac-Toe.js></script>
-       <nav>
-        <ul>
-            <div class="Times Container"><li><a href="index.html">Home</a></li></div>
-            <div class="Times Container"><li><a href="Tic-Tac-Toe.html">Tic-Tac-Toe</a></li></div>
-            <div class="Times Container"><li><a href="About.html">About</a></li></div>
-            <div class="Times Container"><li><a href="Contact Us.html">Contact Us</a></li></div>
-        </nav> 
+    <div class="Times Container"><h1>Tic-Tac-Toe</h1></div>
 
-        <table>
+
+    
+   <nav>
+    <ul>
+        <div class="Times Container"><li><a href="index.html">Home</a></li></div>
+        <div class="Times Container"><li><a href="Tic-Tac-Toe.html">Tic-Tac-Toe</a></li></div>
+        <div class="Times Container"><li><a href="About.html">About</a></li></div>
+        <div class="Times Container"><li><a href="Contact Us.html">Contact Us</a></li></div>
+    </nav> 
+
+
+    <table>
         <tr>
             <td class="cell" id="0"></td>
             <td class="cell" id="1"></td>
@@ -34,11 +37,19 @@
             <td class="cell" id="7"></td>
             <td class="cell" id="8"></td>
         </tr>
-        </table>
+    </table>
 
-        <div class="Times">
-            <button type="button" class="Restart" id="Restart" onclick="RestartGame()">Restart</button>
+        <div class="endgame">
+            <div class="text"></div>
+        </div>
 
+
+            <button type="button" class="Restart" id="Restart" onclick="startGame()">Restart</button>
+
+        
+ <script src=Tic-Tac-Toe.js></script> 
+ <script src="index.js"></script>
 
 </body>
 </html>
+
