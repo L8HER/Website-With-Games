@@ -1,6 +1,8 @@
 let OrigBoard;
-const HumanPlayer= 'O';
+const Player1= 'O';
+const Player2= 'X';
 const AiPlayer= 'X';
+let gameTurn=0;
 const winCombos=[
     [0, 1, 2],
     [3, 4, 5],
@@ -24,15 +26,63 @@ function startGame(){
         cells[i].style.removeProperty('background-color');
         cells[i].addEventListener('click', turnClick, false);
     }
+    gameTurn=0;
 }
 
 function turnClick(square) {
-
-    turn(square.target.id, HumanPlayer);
+    if(gameTurn%2==0){
+        turn(square.target.id, Player1);
+    }
+    else{
+        turn(square.target.id, Player2);
+    }
 
 }
 
 function turn(squareId, player){
     OrigBoard[squareId] = player;
     document.getElementById(squareId).innerText = player;
+    let gameWon=checkWin(OrigBoard, player);
+    if(gameWon) {
+        gameOver(gameWon);
+    }
+    else{
+        gameTurn++;
+    }
+    
+
+}
+
+function checkWin(board, player){
+    let plays = board.reduce((a,e,i) =>
+    (e === player) ? a.concat(i) : a, []);
+    let gameWon =null;
+    for(let [index,win] of winCombos.entries()){
+        /*every element in win array is checked against the index of plays
+        to see if its been played aka >-1, the elem is the parameter 
+        of the function and plays.indexOf checks the index of elem
+        and if that index has number in it, the reduce method should 
+        have added number to spot that has been played. */
+        if(win.every(elem => plays.indexOf(elem) > -1)){
+            gameWon = {index: index, player:player};
+            break;
+        }
+    }
+    return gameWon;
+}
+
+function gameOver(gameWon){
+    for(let index of winCombos[gameWon.index]){
+        document.getElementById(index).style.backgroundColor=
+        gameWon.player==Player1 ? "blue" : "red";
+    }
+    for(let i=0; i<cells.length; i++){
+        cells[i].removeEventListener('click', turnClick, false);
+    }
+    showEnd();
+}
+
+function showEnd(){
+    document.querySelector(".endgame").style.display="block";
+    document.querySelector(".endgame .text").innerText="Who";
 }
