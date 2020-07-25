@@ -3,6 +3,8 @@ const Player1= 'O';
 const Player2= 'X';
 const AiPlayer= 'X';
 let gameTurn=0;
+let Ai;
+let empty;
 const winCombos=[
     [0, 1, 2],
     [3, 4, 5],
@@ -27,16 +29,26 @@ function startGame(){
         cells[i].addEventListener('click', turnClick, false);
     }
     gameTurn=0;
+    Ai=false;
+    document.querySelector(".Ai").style.display="block";
 }
 
 function turnClick(square) {
-    if(gameTurn%2==0){
+    if(typeof OrigBoard[square.target.id] == 'number'){
+    if(Ai==true){
+        turn(square.target.id, Player1);
+        Aiplayer();
+        }
+    else if(gameTurn%2==0){
         turn(square.target.id, Player1);
     }
+   
     else{
         turn(square.target.id, Player2);
+        document.querySelector(".Ai").style.display="none";
     }
 
+}
 }
 
 function turn(squareId, player){
@@ -86,3 +98,21 @@ function showEnd(){
     document.querySelector(".endgame").style.display="block";
     document.querySelector(".endgame .text").innerText="Who";
 }
+
+function Aibutton(){
+    return Ai=true;
+}
+
+function Aiplayer(){
+    if(emptySquare().length>0){
+        turn(empty[Math.floor(Math.random()*empty.length)], AiPlayer);
+    }
+}
+
+function emptySquare(){
+   
+    empty=OrigBoard.filter(s=>typeof s=='number');
+    return empty;
+}
+
+
