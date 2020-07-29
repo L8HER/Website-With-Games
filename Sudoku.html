@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    
+<body>
+    <div>
+        <div class="Times Container"><h1>Sudoku</h1></div>
+        <script src="index.js">
+        </script>
+       
+        <ul>
+            <div class="Times Container"><li><a href="index.html">Home</a></li></div>
+            <div class="Times Container"><li><a href="Tic-Tac-Toe.html">Tic-Tac-Toe</a></li></div>
+            <div class="Times Container"><li><a href="Sudoku.html">Sudoku</a></li></div>
+            <div class="Times Container"><li><a href="Contact Us.html">Contact Us</a></li></div>
+        </div>
+
+<table class="Sutable">
+    <tr class="Surow">
+        <td class="Sucells" id="0"></td>
+        <td class="Sucells" id="1"></td>
+        <td class="Sucells" id="2"></td>
+        <td class="Sucells" id="3"></td>
+        <td class="Sucells" id="4"></td>
+        <td class="Sucells" id="5"></td>
+        <td class="Sucells" id="6"></td>
+        <td class="Sucells" id="7"></td>
+        <td class="Sucells" id="8"></td>
+    </tr>
+    <tr class="Surow">
+        <td class="Sucells" id="9"></td>
+        <td class="Sucells" id="10"></td>
+        <td class="Sucells" id="11"></td>
+        <td class="Sucells" id="12"></td>
+        <td class="Sucells" id="13"></td>
+        <td class="Sucells" id="14"></td>
+        <td class="Sucells" id="15"></td>
+        <td class="Sucells" id="16"></td>
+        <td class="Sucells" id="17"></td>
+    </tr>
+    <tr class="Surow">
+        <td class="Sucells" id="18"></td>
+        <td class="Sucells" id="19"></td>
+        <td class="Sucells" id="20"></td>
+        <td class="Sucells" id="21"></td>
+        <td class="Sucells" id="22"></td>
+        <td class="Sucells" id="23"></td>
+        <td class="Sucells" id="24"></td>
+        <td class="Sucells" id="25"></td>
+        <td class="Sucells" id="26"></td>
+    </tr>
+    <tr class="Surow">
+        <td class="Sucells" id="27"></td>
+        <td class="Sucells" id="28"></td>
+        <td class="Sucells" id="29"></td>
+        <td class="Sucells" id="30"></td>
+        <td class="Sucells" id="31"></td>
+        <td class="Sucells" id="32"></td>
+        <td class="Sucells" id="33"></td>
+        <td class="Sucells" id="34"></td>
+        <td class="Sucells" id="35"></td>
+    </tr>
+    <tr class="Surow">
+        <td class="Sucells" id="36"></td>
+        <td class="Sucells" id="37"></td>
+        <td class="Sucells" id="38"></td>
+        <td class="Sucells" id="39"></td>
+        <td class="Sucells" id="40"></td>
+        <td class="Sucells" id="41"></td>
+        <td class="Sucells" id="42"></td>
+        <td class="Sucells" id="43"></td>
+        <td class="Sucells" id="44"></td>
+    </tr>
+    <tr class="Surow">
+        <td class="Sucells" id="45"></td>
+        <td class="Sucells" id="46"></td>
+        <td class="Sucells" id="47"></td>
+        <td class="Sucells" id="48"></td>
+        <td class="Sucells" id="49"></td>
+        <td class="Sucells" id="50"></td>
+        <td class="Sucells" id="51"></td>
+        <td class="Sucells" id="52"></td>
+        <td class="Sucells" id="53"></td>
+    </tr>
+    <tr class="Surow">
+        <td class="Sucells" id="54"></td>
+        <td class="Sucells" id="55"></td>
+        <td class="Sucells" id="56"></td>
+        <td class="Sucells" id="57"></td>
+        <td class="Sucells" id="58"></td>
+        <td class="Sucells" id="59"></td>
+        <td class="Sucells" id="60"></td>
+        <td class="Sucells" id="61"></td>
+        <td class="Sucells" id="62"></td>
+    </tr>
+    <tr class="Surow">
+        <td class="Sucells" id="63"></td>
+        <td class="Sucells" id="64"></td>
+        <td class="Sucells" id="65"></td>
+        <td class="Sucells" id="66"></td>
+        <td class="Sucells" id="67"></td>
+        <td class="Sucells" id="68"></td>
+        <td class="Sucells" id="69"></td>
+        <td class="Sucells" id="70"></td>
+        <td class="Sucells" id="71"></td>
+    </tr>
+    <tr class="Surow">
+        <td class="Sucells" id="72"></td>
+        <td class="Sucells" id="73"></td>
+        <td class="Sucells" id="74"></td>
+        <td class="Sucells" id="75"></td>
+        <td class="Sucells" id="76"></td>
+        <td class="Sucells" id="7"></td>
+        <td class="Sucells" id="78"></td>
+        <td class="Sucells" id="79"></td>
+        <td class="Sucells" id="80"></td>
+    </tr>
+</table>
+<div>
+    <button class="Numpad" id="100">1</button>
+    <button class="Numpad" id="200">2</button>
+    <button class="Numpad" id="300">3</button>
+    <button class="Numpad" id="400">4</button>
+    <button class="Numpad" id="500">5</button>
+    <button class="Numpad" id="600">6</button>
+    <button class="Numpad" id="700">7</button>
+    <button class="Numpad" id="800">8</button>
+    <button class="Numpad" id="900">9</button>
+    <button class="SuRestart" id="SudoRestart">Restart</button>
+    <button class="SuCheck" id="SudoCheck">Check</button>
+</div>
+<script src="Sudoku.js">
+</script>
+</body>
+</html>

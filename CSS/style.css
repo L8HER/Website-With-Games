@@ -60,7 +60,7 @@ td {
 	cursor: pointer;
 }
 
-table {
+table.TicTable {
 	border-collapse: collapse;
 	position: absolute;
 	left: 50%;
@@ -69,23 +69,23 @@ table {
 }
 
  
- table tr td:hover{
+ table tr td.cell:hover{
      background-color: grey;
  }
 
- table tr:first-child td{
+ table tr.TicRow:first-child td{
      border-top: 0;
  }
 
- table tr:last-child td{
+ table tr.TicRow:last-child td{
     border-bottom: 0;
 }
 
-table tr td:first-child{
+table tr td.cell:first-child{
     border-left: 0;
 }
 
-table tr td:last-child{
+table tr td.cell:last-child{
     border-right:0;
 }
 
@@ -115,6 +115,84 @@ table tr td:last-child{
     top:75%;
     font-size: small;
     background-color: white;
-    
+    overflow: hidden;
+    border-left: 5px;
 }
 
+table.Sutable{
+    top:30%;
+    border-collapse: collapse;
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+}
+
+td.Sucells{
+    width:50px;
+    height:50px;
+    text-align: center;
+    font-size: 20px;
+}
+
+td.Sucells:hover{
+    background-color: grey;
+}
+
+button.SuRestart{
+    position: absolute;
+    top: 90%;
+    left:45%;
+    margin-left: -30px;
+}
+
+button.SuCheck{
+    position: absolute;
+    top:90%;
+    left:50%;
+}
+
+button.Numpad:nth-child(1){
+    position: absolute;
+    top:85%;
+    left:30%;
+}
+button.Numpad:nth-child(2){
+    position: absolute;
+    top:85%;
+    left:35%;
+}
+button.Numpad:nth-child(3){
+    position: absolute;
+    top:85%;
+    left:40%;
+}
+button.Numpad:nth-child(4){
+    position: absolute;
+    top:85%;
+    left:45%;
+}
+button.Numpad:nth-child(5){
+    position: absolute;
+    top:85%;
+    left:50%;
+}
+button.Numpad:nth-child(6){
+    position: absolute;
+    top:85%;
+    left:55%;
+}
+button.Numpad:nth-child(7){
+    position: absolute;
+    top:85%;
+    left:60%;
+}
+button.Numpad:nth-child(8){
+    position: absolute;
+    top:85%;
+    left:65%;
+}
+button.Numpad:nth-child(9){
+    position: absolute;
+    top:85%;
+    left:70%;
+}

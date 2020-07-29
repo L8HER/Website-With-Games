@@ -18,8 +18,8 @@ const winCombos=[
 ]
 const cells=document.querySelectorAll('.cell'); 
 
-startGame();
 
+startGame();
 function startGame(){
     document.querySelector(".endgame").style.display="none";
     OrigBoard = Array.from(Array(9).keys());
@@ -38,6 +38,7 @@ function turnClick(square) {
     if(Ai==true){
         turn(square.target.id, Player1);
         Aiplayer();
+
         }
     else if(gameTurn%2==0){
         turn(square.target.id, Player1);
@@ -91,12 +92,7 @@ function gameOver(gameWon){
     for(let i=0; i<cells.length; i++){
         cells[i].removeEventListener('click', turnClick, false);
     }
-    showEnd();
-}
-
-function showEnd(){
-    document.querySelector(".endgame").style.display="block";
-    document.querySelector(".endgame .text").innerText="Who";
+    playerWin(gameWon);
 }
 
 function Aibutton(){
@@ -115,4 +111,19 @@ function emptySquare(){
     return empty;
 }
 
+function playerWin(gameWon){
+    if(gameWon.player==Player1){
+        document.querySelector(".endgame").style.display="block";
+        document.querySelector(".endgame .text").innerText="Player 1 Win";
+    }
+    if(gameWon.player==Player2){
+        document.querySelector(".endgame").style.display="block";
+        document.querySelector(".endgame .text").innerText="Player 2 Win";
+    }
 
+    if(gameWon.player==AiPlayer){
+        document.querySelector(".endgame").style.display="block";
+        document.querySelector(".endgame .text").innerText="AI Win";
+    }
+
+}

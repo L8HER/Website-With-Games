@@ -16,23 +16,23 @@
     <ul>
         <div class="Times Container"><li><a href="index.html">Home</a></li></div>
         <div class="Times Container"><li><a href="Tic-Tac-Toe.html">Tic-Tac-Toe</a></li></div>
-        <div class="Times Container"><li><a href="About.html">About</a></li></div>
+        <div class="Times Container"><li><a href="Sudoku.html">Sudoku</a></li></div>
         <div class="Times Container"><li><a href="Contact Us.html">Contact Us</a></li></div>
     </nav> 
 
 
-    <table>
-        <tr>
+    <table class="TicTable">
+        <tr class="TicRow">
             <td class="cell" id="0"></td>
             <td class="cell" id="1"></td>
             <td class="cell" id="2"></td>
         </tr>
-        <tr>
+        <tr class="TicRow">
             <td class="cell" id="3"></td>
             <td class="cell" id="4"></td>
             <td class="cell" id="5"></td>
         </tr>
-        <tr>
+        <tr class="TicRow">
             <td class="cell" id="6"></td>
             <td class="cell" id="7"></td>
             <td class="cell" id="8"></td>
@@ -44,8 +44,13 @@
         </div>
 
 
-        <div><button type="button" class="Restart" onclick="startGame()">Restart</button></div>
-        <div><button type="button" class="Ai" onclick="Aibutton()" id="Aibutton">Ai Player</button></div>
+        <div>
+
+        <button type="button" class="Restart" onclick="startGame()">Restart  </button>
+        <button type="button" class="Ai" onclick="Aibutton()" id="Aibutton">Ai Player</button>
+    
+    </div>
+
 
         
  <script src=Tic-Tac-Toe.js></script> 
