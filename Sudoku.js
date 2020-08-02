@@ -214,36 +214,3 @@ function ColCheckDups(board){
 
 
 
-
-
-
-    
-   /*let CheckCount=0;
-   let rowvaluesAlreadySeen=[99];
-   let columnvaluesAlreadySeen=[99];
-   let rowvalue;
-   let columnvalue;
-       while(CheckCount<9){
-           for(var i=CheckCount; i<9; i++){
-               valuesAlreadySeen=[99];
-               tempCheckBoard=[1,2,3,4,5,6,7,8,9];
-               if(typeof(board[CheckCount][i])==='number'){
-                   rowvalue=board[CheckCount][i];
-               }
-               if(typeof(board[i][CheckCount])==='number'){
-                   columnvalue=board[i][CheckCount];
-               }
-               if(rowvaluesAlreadySeen.indexOf(rowvalue)===-1){
-                   rowvaluesAlreadySeem.push(rowvalue);
-               }
-               else if(valuesAlreadySeen.indexOf(value)!==-1&&typeof(board[CheckCount][i])==='number'){
-                   tempCheckBoard.splice(tempCheckBoard.filter(value),1);
-                   board[CheckCount][i]=tempCheckBoard[Math.floor(Math.random()*tempCheckBoard.length)];
-                   cell[checkBoard*9+i].innerText=board[CheckCount][i];
-                   tempCheckBoard.splice(tempCheckBoard.filter(board[CheckCount][i]),1);
-               }
-           CheckCount++;
-       }
-       }
-   }
-   }*/
